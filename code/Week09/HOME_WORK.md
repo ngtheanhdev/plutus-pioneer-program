@@ -26,12 +26,12 @@ Push phần code thay đổi lên repo và ghi lại kết quả (TxHash) vào f
 
 ### Mint Oracle's NFT
 ```
-0c79b42c32b6dcdf12c154a29ef90e81b52ff63626db9c871cacbc6525c4c89e
+1ffebc4fc690285f5744fba5016e416fb756944e2d38a263e7bb916b8c31ecf9
 ```
 
-### S2: Deploy Oracle , with ADA price = 1$
+### S2: Deploy Oracle
 ```
-
+31ded332f874b17cb230ca47515f7afda75519bac98987fe242f4b79b5917789
 ```
 
 ### S3: Owner deloy Scripts, minimum ratio = 150%
