@@ -45,9 +45,9 @@ multipleTx =
 
 -- newtype State s a = State { runState :: s -> (a, s) }
 
-sendValue' :: String -> Integer -> String -> State Mock Bool
+sendValue' :: String -> Integer -> String -> State Mock Bool -- Thay vì trả về (Bool, Mock), hàm chỉ trả về Bool.
 sendValue' from amount to = do
-    mockS <- get
+    mockS <- get -- lấy blockchain hiện tại
     let senderUtxos = filter ((== from) . owner) (utxos mockS)
         blockchainWithoutSenderUtxos = filter ((/= from) . owner) (utxos mockS)
         totalSenderFunds = sum (map value senderUtxos)
@@ -55,7 +55,7 @@ sendValue' from amount to = do
         senderChange = UTxO from (totalSenderFunds - amount)
     if totalSenderFunds >= amount
         then do
-            put $ Mock $ [receiverUtxo] ++ [senderChange] ++ blockchainWithoutSenderUtxos
+            put $ Mock $ [receiverUtxo] ++ [senderChange] ++ blockchainWithoutSenderUtxos -- cập nhật blockchain mới
             return True
         else return False
 

@@ -6,3 +6,19 @@ dist-newstyle/
 code/Week05/lecture/secret.ts
 code/Week08/tmp/
 code/Week08/assets/staking.plutus
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# Documentation build artifacts
+docs/psm-docs/book/
+
+# Personal notes and documentation
+CLAUDE.md
+*.md.backup
+
+# Environment variables
+.env
+.env.local
+.env*.local

@@ -72,20 +72,20 @@ export const AppStateContext = createContext<{
 export default function App({ Component, pageProps }: AppProps) {
     const [appState, setAppState] = useState<AppState>(initialAppState);
 
-    const connectLucidAndNami = async () => {
+    const connectLucidAndEternl = async () => {
         const lucid = await Lucid.new(
             new Blockfrost(
                 "https://cardano-preview.blockfrost.io/api/v0",
-                "previewfz0NMrCf2gTuGYmnkzB4KfNmM3qzYBzL"
+                process.env.NEXT_PUBLIC_BLOCKFROST_API_KEY || ""
             ),
             "Preview"
         );
-        if (!window.cardano.nami) {
-            window.alert("Please install Nami Wallet");
+        if (!window.cardano.eternl) {
+            window.alert("Please install Eternl Wallet");
             return;
         }
-        const nami = await window.cardano.nami.enable();
-        lucid.selectWallet(nami);
+        const eternl = await window.cardano.eternl.enable();
+        lucid.selectWallet(eternl);
         setAppState({
             ...initialAppState,
             lucid: lucid,
@@ -95,7 +95,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
     useEffect(() => {
         if (appState.lucid) return;
-        connectLucidAndNami();
+        connectLucidAndEternl();
     }, [appState]);
     return (
         <AppStateContext.Provider value={{ appState, setAppState }}>

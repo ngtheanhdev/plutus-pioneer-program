@@ -103,6 +103,8 @@ package cardano-wallet-launcher
   optimization: False
 package cardano-wallet-core-integration
   optimization: False
+package cardano-crypto-praos
+  flags: -external-libsodium-vrf
 
 -- Direct dependency.
 -- Compared to others, cardano-wallet doesn't bump dependencies very often.
