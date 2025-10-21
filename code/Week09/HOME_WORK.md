@@ -26,48 +26,45 @@ Push phần code thay đổi lên repo và ghi lại kết quả (TxHash) vào f
 
 ### Mint Oracle's NFT
 ```
-1ffebc4fc690285f5744fba5016e416fb756944e2d38a263e7bb916b8c31ecf9
+7b1262e3ec743b364b915e273248da7a9881b3b9138ec403bbe5e351104aaf9b
 ```
 
 ### S2: Deploy Oracle
 ```
-31ded332f874b17cb230ca47515f7afda75519bac98987fe242f4b79b5917789
+b2a8c75ad60ffbae4a578ff1039fd3d741964d64d73a9d65d74765a6ba8329b5
 ```
 
-### S3: Owner deloy Scripts, minimum ratio = 150%
+### S3: Owner deploy Scripts
+```
+bb20099eeec6192eeb66168bca6752ed6e95c93ca30804178efe99c467ae88dd
 ```
 
+### S4: User mint 10 USDP
+```
+a48c7ac978adde9324e763cc107aa6d1b8675303b89b6a848bfa42ab929e5f64 
 ```
 
-### S4: User 1 mint 10 stablecoin , collateral 15 ADA
+### S5: User burn 10 USDP
+```
+cd293094fcb753f3ea34f5d807b63c05f62c06607faeaaa48941e71030f72e22
 ```
 
+### S6: User 1 mint 10 stable coin usdp
+```
+ce2aa140f188db2e792282af97a7d5a8f75578d1c5e9d2b227aaf59ec0c47087
 ```
 
-### S5: User 1 burn 10 stablecoin, no change ADA price
+### S7: User 2 mint 5 stable coin usdp
+```
+7049169580002ca9bb1dc75ce5630b4eba7331c849801bdf73d586f86048a58d
 ```
 
+### S8: Oracle update price down to 0.9 = 90 cent
+```
+cb3a885298efae9aa60d8856fa7e4eb34a4eadb6706be2afa466ef5d0d023c70
 ```
 
-## Yêu cầu nâng cao
-> User 1 mint 10 stablecoin ( collateral 15 ADA) , User 2 mint 50 stablecoint (collateral 100 ADA) , Ada price down to 0.9, then User2 liquite 10 stablecoin of user 1
-
-### S6: User 1 mint 10 stablecoin ( collateral 15 ADA)
+### S9: User 2 liquite utxo user 1
 ```
-
-```
-
-### S7: User 2 mint 50 stablecoint (collateral 100 ADA)
-```
-
-```
-
-### S8: Update Ada Price to 0.9$
-```
-
-```
-
-### S9: User 2 liqute colateral UTxO of user 1
-```
-
+48ca6c8229ef2d022a86fd52abeb145c410cc99d1f2952a289ec77eec1b2bb81
 ```
